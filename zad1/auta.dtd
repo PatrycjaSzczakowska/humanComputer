@@ -1,0 +1,50 @@
+<!ELEMENT carShowroom (brands,cars,metadata)>
+
+<!ELEMENT brands (brand+)>
+<!ELEMENT brand (name, country, headquarters*, chairman?)>
+<!ATTLIST brand id ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ATTLIST country continent (Europe|Asia|North_America|South_America|Africa|Austalia_and_Oceania) "Europe">
+<!ELEMENT headquarters (#PCDATA)>
+<!ELEMENT chairman (#PCDATA)>
+
+<!ELEMENT cars (car+)>
+<!ELEMENT car (model, type, production+, engine, wheeldrive, condition, lacquer?, price)>
+<!ATTLIST car 
+    id ID #REQUIRED
+    brandId IDREF #REQUIRED>
+<!ELEMENT model (#PCDATA)>
+<!ATTLIST model version NMTOKENS #IMPLIED>
+<!ELEMENT type (#PCDATA)>
+<!ATTLIST type 
+    doors NMTOKEN #REQUIRED
+    seats NMTOKEN #REQUIRED >
+<!ELEMENT production (#PCDATA)>
+<!ATTLIST production 
+    start NMTOKEN #REQUIRED
+    end NMTOKEN #IMPLIED
+    country CDATA #IMPLIED >
+<!ELEMENT engine (cylindersNumber, capacity, power)>
+<!ATTLIST engine fuel (Diesel|Petrol) "Diesel">
+<!ELEMENT cylindersNumber (#PCDATA)>
+<!ELEMENT capacity (#PCDATA)>
+<!ATTLIST capacity unit NMTOKEN #FIXED "cm3">
+<!ELEMENT power (#PCDATA)>
+<!ATTLIST power unit NMTOKEN #FIXED "KM">
+<!ELEMENT wheeldrive (#PCDATA)>
+<!ATTLIST wheeldrive automatic CDATA #REQUIRED>
+<!ELEMENT condition (#PCDATA)>
+<!ATTLIST condition 
+    accidentfree NMTOKEN #REQUIRED
+    mileage NMTOKENS #REQUIRED >
+<!ELEMENT lacquer (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price 
+    currency CDATA #REQUIRED>
+
+<!ELEMENT metadata (author+,modificationDate)>
+<!ELEMENT author (#PCDATA)>
+<!ATTLIST author 
+    index NMTOKEN #IMPLIED>
+<!ELEMENT modificationDate (#PCDATA)>

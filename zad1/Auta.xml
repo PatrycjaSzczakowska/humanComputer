@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="Auta.css"?>
+<!DOCTYPE carShowroom SYSTEM "Auta.dtd">
+<carShowroom>
+    <brands>
+    <brand id="landRover"> 
+        <name>Land Rover</name>
+        <country continent="Europe">UK</country>
+        <headquarters>Coventry, UK</headquarters>
+        <chairman>Ralf Speth</chairman>
+    </brand>
+
+    <brand id="jaguar"> 
+        <name>Jaguar</name>
+        <country continent="Europe">UK</country>
+        <headquarters>Coventry, UK</headquarters>
+        <chairman>Ralf Speth</chairman>
+    </brand>
+
+    <brand id="volkswagen"> 
+        <name>Volkswagen</name>
+        <country continent="Europe">Germany</country>
+        <headquarters>Wolfsburg, Germany</headquarters>
+        <chairman>Herbert Diess</chairman>
+    </brand>
+
+    <brand id="renault"> 
+        <name>Renault</name>
+        <country continent="Europe">France</country>
+        <headquarters>Boulogne-Billancourt, France</headquarters>
+        <chairman>Thierry Bolloré</chairman>
+    </brand>
+    
+    <brand id="jeep"> 
+        <name>Jeep</name>
+        <country continent="North_America">U.S.</country>
+        <headquarters>Toledo, Ohio, U.S.</headquarters>
+        <chairman>Michael Manley</chairman>
+    </brand>
+
+    <brand id="subaru"> 
+        <name>Subaru</name>
+        <country continent="Asia">Japan</country>
+        <headquarters> Shibuya, Tokio, Japan</headquarters>
+        <chairman>Tomomi Nakamura</chairman>
+    </brand>
+    </brands>
+
+    <cars>
+    <car id="c1" brandId='landRover'>
+        <model version="IV">Range Rover</model>
+        <type doors="5" seats="5">SUV</type>
+        <production start="2012">2013</production>
+        <engine fuel="Diesel">
+            <cylindersNumber>6</cylindersNumber>
+            <capacity>3000</capacity>
+            <power>258</power>
+        </engine>
+        <wheeldrive automatic="y">4x4</wheeldrive>
+        <condition accidentfree="y" mileage="137000 km">used</condition>
+        <lacquer>brown</lacquer>
+        <price currency="$">50000</price>
+    </car>
+
+    <car id="c2" brandId='landRover'>
+        <model version="III">Range Rover</model>
+        <type doors="5" seats="5">SUV</type>
+        <production start="2001" end="2012">2006</production>
+        <engine>
+            <cylindersNumber>6</cylindersNumber>
+            <capacity>4200</capacity>
+            <power>396</power>
+        </engine>
+        <wheeldrive automatic="y">4x4</wheeldrive>
+        <condition accidentfree="n" mileage="130000 km">used</condition>
+        <lacquer>black</lacquer>
+        <price currency="$">13000</price>
+    </car>
+
+    <car id="c3" brandId='subaru'>
+        <model version="GH">Impreza</model>
+        <type doors="5" seats="5">hatchback</type>
+        <production start="2007">2018</production>
+        <engine fuel="Petrol">
+            <cylindersNumber>6</cylindersNumber>
+            <capacity>1995</capacity>
+            <power>156</power>
+        </engine>
+        <wheeldrive automatic="n">4x4</wheeldrive>
+        <condition accidentfree="y" mileage="10 km">new</condition>
+        <lacquer>white</lacquer>
+        <price currency="$">40000</price>
+    </car>
+
+    <car id="c4" brandId='landRover'>
+        <model version="110">Defender</model>
+        <type doors="5" seats="7">SUV</type>
+        <production start="2007" end="2016">2011</production>
+        <engine fuel="Diesel">
+            <cylindersNumber>6</cylindersNumber>
+            <capacity>2400</capacity>
+            <power>122</power>
+        </engine>
+        <wheeldrive automatic="n">4x4</wheeldrive>
+        <condition accidentfree="y" mileage="45000 km">new </condition>
+        <lacquer>green</lacquer>
+        <price currency="$">38000</price>
+    </car>
+
+    <car id="c5" brandId='jaguar'>
+        <model>F-Type</model>
+        <type doors="2" seats="2">coupe</type>
+        <production start="2007">2017</production>
+        <engine fuel="Petrol">
+            <cylindersNumber>12</cylindersNumber>
+            <capacity>5000</capacity>
+            <power>575</power>
+        </engine>
+        <wheeldrive automatic="n">4x4</wheeldrive>
+        <condition accidentfree="y" mileage="4511 km">used </condition>
+        <lacquer>white</lacquer>
+        <price currency="$">180000</price>
+    </car>
+
+    <car id="c7" brandId='volkswagen'>
+        <model version="VII">Golf</model>
+        <type doors="5" seats="5">combi</type>
+        <production start="2012" country="Poland">2019</production>
+        <engine>
+            <cylindersNumber>4</cylindersNumber>
+            <capacity>1986</capacity>
+            <power>150</power>
+        </engine>
+        <wheeldrive automatic="n">front-wheel</wheeldrive>
+        <condition accidentfree="y" mileage="10 km">new </condition>
+        <lacquer>grey</lacquer>
+        <price currency="$">42000</price>
+    </car>
+
+    <car id="c8" brandId='jeep'>
+        <model version="III">Wrangler</model>
+        <type doors="4" seats="5">SUV</type>
+        <production start="2006">2015</production>
+        <engine fuel="Petrol">
+            <cylindersNumber>4</cylindersNumber>
+            <capacity>3605</capacity>
+            <power>285</power>
+        </engine>
+        <wheeldrive automatic="n">4x4</wheeldrive>
+        <condition accidentfree="y" mileage="26559 km">used </condition>
+        <lacquer>green</lacquer>
+        <price currency="$">37000</price>
+    </car>
+
+    <car id="c9" brandId='renault'>
+        <model>Kadjar</model>
+        <type doors="5" seats="5">SUV</type>
+        <production start="2007">2018</production>
+        <engine fuel="Petrol">
+            <cylindersNumber>142</cylindersNumber>
+            <capacity>1300 cm3</capacity>
+            <power>140 KM</power>
+        </engine>
+        <wheeldrive automatic="n">front-wheel</wheeldrive>
+        <condition accidentfree="y" mileage="10 km">new </condition>
+        <lacquer>blue</lacquer>
+        <price currency="$">20000</price>
+    </car>
+    </cars>
+    <metadata>
+        <author>Jędrzej Hasiura</author>
+        <author index='210332'>Patrycja Szczakowska</author>
+        <modificationDate>2019-03-09</modificationDate>
+    </metadata>
+</carShowroom>
+

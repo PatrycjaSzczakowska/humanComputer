@@ -1,0 +1,82 @@
+brands::before { 
+    display: block;
+    content:"Available brands:";
+    font-size: 10pt;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 255, 98, 0.301);
+}
+
+brands > brand {
+    display: block;
+    margin: 30px;
+    margin-left: 0px;
+    width: 300px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: blueviolet;
+    font-size: 10pt;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 255, 98, 0.548);
+    position: relative;
+    left: 40%;
+}
+
+brand > name{
+    display: block;
+	font-size: 14pt;  
+}
+
+brand > country{
+    display: block;
+}
+
+brand > country[continent='Europe']{
+    font-weight:bold;
+}
+
+brand > continent{
+    display: block;
+}
+brand > headquarters{
+    display: block;
+}
+
+brand > chairman{
+    display: block;
+}
+​
+cars::before { 
+    display: block;
+    content:"Available cars:";
+    font-size: 10pt;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 255, 98, 0.301);
+}
+
+cars > car {
+    display: table;
+    list-style-type: decimal;
+	font-size: 10pt;
+    padding: 10px;
+}
+
+metadata{
+    display: block;
+    font-size: 10pt;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 255, 98, 0.301);
+}
+
+metadata > author{
+    display: list-item;
+    list-style-type: circle;
+	margin-left:10px;
+}
+
+metadata > modificationDate{
+    font-weight:bold;
+}
