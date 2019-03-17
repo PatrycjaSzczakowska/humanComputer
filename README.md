@@ -1,0 +1,1 @@
+# komputer_czlowiek
