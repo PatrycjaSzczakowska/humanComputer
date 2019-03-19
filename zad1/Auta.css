@@ -1,17 +1,25 @@
+carShowroom {
+	display: block; 
+	background: lightblue;
+	padding-top: 25px; 
+	text-align: center; 
+	counter-reset: counter; 
+}
+
 brands::before { 
     display: block;
     content:"Available brands:";
-    font-size: 10pt;
+    font-size: 40pt;
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 255, 98, 0.301);
+    background-color: rgb(199, 235, 247);
 }
 
-brands > brand {
+brands brand {
     display: block;
     margin: 30px;
     margin-left: 0px;
-    width: 300px;
+    width: 20%;
     border-style: solid;
     border-width: 3px;
     border-color: blueviolet;
@@ -23,44 +31,59 @@ brands > brand {
     left: 40%;
 }
 
-brand > name{
+brand name{
     display: block;
-	font-size: 14pt;  
+	font-size: 20pt;  
 }
 
-brand > country{
+brand country{
     display: block;
 }
 
-brand > country[continent='Europe']{
+brand country[continent='Europe']{
     font-weight:bold;
 }
 
-brand > continent{
+brand continent{
     display: block;
 }
-brand > headquarters{
+brand  headquarters{
     display: block;
 }
 
-brand > chairman{
-    display: block;
+brand chairman::before {
+    display: inline;
+	font-weight: bold;
+    content: 'Chairman: '; 
 }
-​
-cars::before { 
+brand  chairman{
     display: block;
-    content:"Available cars:";
-    font-size: 10pt;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 255, 98, 0.301);
 }
 
-cars > car {
-    display: table;
+
+cars car {
+    display: inline-block;
     list-style-type: decimal;
 	font-size: 10pt;
     padding: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: blueviolet;
+    text-align: center;
+    background-color: rgba(0, 255, 98, 0.548);
+    position: relative;
+    margin: 15px;
+
+}
+car:hover { 
+    background-color: yellow;
+  }
+
+model::before{
+	font-size: 18px; 
+	font-weight: bold;
+	content: counter(counter) '. '; 
+	counter-increment: counter;
 }
 
 metadata{
@@ -68,7 +91,7 @@ metadata{
     font-size: 10pt;
     text-align: center;
     padding: 20px;
-    background-color: rgba(0, 255, 98, 0.301);
+    background-color:rgb(199, 235, 247);
 }
 
 metadata > author{
