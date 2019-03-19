@@ -132,7 +132,7 @@ car price::before{
 }
 
 car price::after{
-    content: ' $ '
+    content: " " attr(currency)
 }
 
 car engine {

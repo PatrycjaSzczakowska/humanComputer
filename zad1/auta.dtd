@@ -43,7 +43,8 @@
 <!ATTLIST price 
     currency CDATA #REQUIRED>
 
-<!ELEMENT metadata (author+,modificationDate)>
+<!ELEMENT metadata (comment,author+,modificationDate)>
+<!ELEMENT comment (#PCDATA)>
 <!ELEMENT author (#PCDATA)>
 <!ATTLIST author 
     index NMTOKEN #IMPLIED>
