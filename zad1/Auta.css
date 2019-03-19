@@ -97,7 +97,7 @@ car model::before{
 }
 
 car model::after{
-    content: " "attr(version)" "; 
+    content: " "attr(version)""; 
 }
 
 car type::before{
