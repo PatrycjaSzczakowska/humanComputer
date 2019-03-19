@@ -31,24 +31,21 @@ brands brand {
     left: 40%;
 }
 
-brand name{
-    display: block;
-	font-size: 20pt;  
+brand:hover { 
+    width: 40%;
+    left: 30%;
 }
 
-brand country{
+brand *{
     display: block;
+}
+
+brand name{
+	font-size: 20pt;  
 }
 
 brand country[continent='Europe']{
     font-weight:bold;
-}
-
-brand continent{
-    display: block;
-}
-brand  headquarters{
-    display: block;
 }
 
 brand chairman::before {
@@ -56,34 +53,121 @@ brand chairman::before {
 	font-weight: bold;
     content: 'Chairman: '; 
 }
-brand  chairman{
-    display: block;
-}
 
 
 cars car {
     display: inline-block;
-    list-style-type: decimal;
 	font-size: 10pt;
     padding: 10px;
-    border-style: solid;
-    border-width: 3px;
+    border-style: groove;
+    border-width: 2px;
     border-color: blueviolet;
-    text-align: center;
-    background-color: rgba(0, 255, 98, 0.548);
+    text-align: left;
+    background-color: rgb(225, 244, 250);
     position: relative;
     margin: 15px;
 
 }
-car:hover { 
-    background-color: yellow;
-  }
 
-model::before{
-	font-size: 18px; 
-	font-weight: bold;
+car::before{
+    display:block;
+    font-size: 18px; 
+    text-align: center;
 	content: counter(counter) '. '; 
 	counter-increment: counter;
+}
+
+car:hover { 
+    background-color: yellow;
+}
+
+car *{
+    display:block;  
+}
+
+
+car *::before {
+    display:inline;
+    font-size: 14px; 
+    font-weight:bold;
+}
+
+car model::before{
+    content: 'model: '; 
+}
+
+car model::after{
+    content: " "attr(version)" "; 
+}
+
+car type::before{
+    content: 'type: '; 
+}
+
+type:after {
+    content: "(" attr(doors)"  doors, "attr(seats)" seats)";
+  }
+
+car production::before{
+    content: 'production: '; 
+}
+
+car engine::before{
+    content: 'engine: '; 
+}
+car wheeldrive::before{
+    content: 'wheeldrive: '; 
+}
+
+car condition::before{
+    content: 'condition: ';
+}
+
+car lacquer::before{
+    content: 'lacquer: '
+}
+
+car price::before{
+    content: 'price: ';
+}
+
+car price::after{
+    content: ' $ '
+}
+
+car engine {
+    display: block;
+	font-size: 10pt;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(194, 221, 40);
+    position: relative;
+    margin: 5px;
+}
+
+car engine[fuel="Petrol"]{
+    background-color: rgb(40, 179, 221);
+}
+
+car engine[fuel="Diesel"]{
+    background-color: rgb(194, 221, 40);
+}
+
+engine cylindersNumber::after{
+    content: ' cylinders '
+}
+
+engine capacity::after{
+    content: ' cm3 '
+}
+
+engine power::after{
+    content: ' KM '
+}
+
+car condition[accidentfree='n']{
+    text-decoration: underline;
+    text-decoration-color: red;
 }
 
 metadata{

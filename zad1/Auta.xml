@@ -158,8 +158,8 @@
         <production start="2007">2018</production>
         <engine fuel="Petrol">
             <cylindersNumber>142</cylindersNumber>
-            <capacity>1300 cm3</capacity>
-            <power>140 KM</power>
+            <capacity>1300</capacity>
+            <power>140</power>
         </engine>
         <wheeldrive automatic="n">front-wheel</wheeldrive>
         <condition accidentfree="y" mileage="10 km">new </condition>
