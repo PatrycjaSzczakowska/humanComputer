@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.przyklad.pl/cars" xmlns:cars="http://www.przyklad.pl/cars">
+  <simpleType name="boolean">
+    <restriction base="normalizedString">
+      <pattern value="[YyNn]" />
+    </restriction>
+  </simpleType>
+  <simpleType name="fuelEnum">
+    <restriction base="normalizedString">
+      <enumeration value="Diesel" />
+      <enumeration value="Petrol" />
+    </restriction>
+  </simpleType>
+  <simpleType name="doors">
+    <restriction base="integer">
+      <pattern value="[2-5]" />
+    </restriction>
+  </simpleType>
+  <simpleType name="seats">
+    <restriction base="integer">
+      <pattern value="[2-9]" />
+    </restriction>
+  </simpleType>
+  <complexType name="carModel">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="version" type="normalizedString" use="optional" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carType">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="doors" type="cars:doors" use="required" />
+        <attribute name="seats" type="cars:seats" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carProduction">
+    <simpleContent>
+      <extension base="short">
+        <attribute name="start" type="short" use="required" />
+        <attribute name="end" type="short" use="optional" />
+        <attribute name="country" type="normalizedString" use="optional" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carEngineCapacity">
+    <simpleContent>
+      <extension base="short">
+        <attribute name="unit" type="normalizedString" fixed="cm3" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carEnginePower">
+    <simpleContent>
+      <extension base="short">
+        <attribute name="unit" type="normalizedString" fixed="KM" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carEngine">
+    <sequence>
+      <element name="cylindersNumber" type="byte" minOccurs="1" maxOccurs="1" />
+      <element name="capacity" type="cars:carEngineCapacity" minOccurs="1" maxOccurs="1" />
+      <element name="power" type="cars:carEnginePower" minOccurs="1" maxOccurs="1" />
+    </sequence>
+    <attribute name="fuel" type="cars:fuelEnum" use="optional" default="Diesel" />
+  </complexType>
+  <complexType name="carWheeldrive">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="automatic" type="cars:boolean" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carCondition">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="accidentfree" type="cars:boolean" use="required" />
+        <attribute name="mileage" type="normalizedString" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carPrice">
+    <simpleContent>
+      <extension base="int">
+        <attribute type="normalizedString" name="currency" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="car">
+    <sequence>
+      <element name="model" type="cars:carModel" minOccurs="1" maxOccurs="1" />
+      <element name="type" type="cars:carType" minOccurs="1" maxOccurs="1" />
+      <element name="production" type="cars:carProduction" minOccurs="1" maxOccurs="unbounded" />
+      <element name="engine" type="cars:carEngine" minOccurs="1" maxOccurs="1" />
+      <element name="wheeldrive" type="cars:carWheeldrive" minOccurs="1" maxOccurs="1" />
+      <element name="condition" type="cars:carCondition" minOccurs="1" maxOccurs="1" />
+      <element name="lacquer" type="normalizedString" minOccurs="0" maxOccurs="1" />
+      <element name="price" type="cars:carPrice" minOccurs="1" maxOccurs="1" />
+    </sequence>
+    <attribute type="normalizedString" name="id" use="required" />
+    <attribute type="normalizedString" name="brandId" use="required" />
+  </complexType>
+  <complexType name="cars">
+    <sequence>
+      <element name="car" type="cars:car" minOccurs="1" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+</schema>

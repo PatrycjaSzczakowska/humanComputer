@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.przyklad.pl/showroom" xmlns:showroom="http://www.przyklad.pl/showroom" xmlns:metainfo="http://www.przyklad.pl/metainfo" xmlns:brands="http://www.przyklad.pl/brands" xmlns:cars="http://www.przyklad.pl/cars">
+  <import schemaLocation="MetaInfo.xsd" namespace="http://www.przyklad.pl/metainfo" />
+  <import schemaLocation="Brands.xsd" namespace="http://www.przyklad.pl/brands" />
+  <import schemaLocation="Cars.xsd" namespace="http://www.przyklad.pl/cars" />
+  <element name="carShowroom">
+    <complexType>
+      <sequence>
+        <element name="brands" type="brands:brands" minOccurs="1" maxOccurs="1" />
+        <element name="cars" type="cars:cars" minOccurs="1" maxOccurs="1" />
+        <element name="metadata" type="metainfo:metadata" />
+      </sequence>
+    </complexType>
+    <key name="brandId">
+      <selector xpath="./brands/brand" />
+      <field xpath="@id" />
+    </key>
+    <keyref name="brandIdref" refer="showroom:brandId">
+      <selector xpath="./cars/car" />
+      <field xpath="@brandId" />
+    </keyref>
+    <key name="carId">
+      <selector xpath="./cars/cars" />
+      <field xpath="@id" />
+    </key>
+  </element>
+</schema>

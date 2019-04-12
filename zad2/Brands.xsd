@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://www.przyklad.pl/brands"
+  xmlns:brands="http://www.przyklad.pl/brands">
+  <simpleType name="continentEnum">
+    <restriction base="string">
+      <enumeration value="Europe" />
+      <enumeration value="Asia" />
+      <enumeration value="North_America" />
+      <enumeration value="South_America" />
+      <enumeration value="Africa" />
+      <enumeration value="Austalia_and_Oceania" />
+    </restriction>
+  </simpleType>
+  <complexType name="brandCountry">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="continent" type="brands:continentEnum" use="optional" default="Europe" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="brand">
+    <sequence>
+      <element name="name" type="normalizedString" minOccurs="1" maxOccurs="1" />
+      <element name="country" type="brands:brandCountry" minOccurs="1" maxOccurs="1" />
+      <element name="headquarters" type="normalizedString" minOccurs="0" maxOccurs="unbounded" />
+      <element name="chairman" type="normalizedString" minOccurs="0" maxOccurs="1" />
+    </sequence>
+    <attribute name="id" type="normalizedString" use="required" />
+  </complexType>
+  <complexType name="brands">
+    <sequence>
+      <element name="brand" type="brands:brand" minOccurs="1" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+</schema>
