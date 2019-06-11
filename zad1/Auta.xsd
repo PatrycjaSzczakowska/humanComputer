@@ -1,0 +1,167 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" 
+xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:simpleType name="continentEnum">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Europe" />
+    <xs:enumeration value="Asia" />
+    <xs:enumeration value="North_America" />
+	<xs:enumeration value="South_America" />
+    <xs:enumeration value="Africa" />
+    <xs:enumeration value="Austalia_and_Oceania" />
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="fuelEnum">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Diesel" />
+    <xs:enumeration value="Petrol" />
+  </xs:restriction>
+</xs:simpleType>
+  <xs:element name="carShowroom">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="brands" minOccurs ="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="brand" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element  name="name" type="xs:string" minOccurs ="1" maxOccurs="1"/>
+                    <xs:element name="country" minOccurs ="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="continent" type="continentEnum" use="optional" default="Europe"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="headquarters" type="xs:string" minOccurs ="0" maxOccurs="unbounded"/>
+                    <xs:element name="chairman" type="xs:string" minOccurs ="0" maxOccurs="1"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cars" minOccurs ="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="car" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="model" minOccurs ="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute  name="version" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="type" minOccurs ="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="doors" type="xs:byte" use="required"/>
+                            <xs:attribute name="seats" type="xs:byte" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="production" minOccurs ="1" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:short">
+                            <xs:attribute name="start" type="xs:short" use="required"/>
+                            <xs:attribute name="end" type="xs:short" use="optional"/>
+                            <xs:attribute name="country" type="xs:string" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="engine" minOccurs ="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="cylindersNumber" type="xs:byte" minOccurs ="1" maxOccurs="1"/>
+                          <xs:element name="capacity" minOccurs ="1" maxOccurs="1">
+						    <xs:complexType>
+							  <xs:simpleContent>
+							    <xs:extension base="xs:short">
+								  <xs:attribute name="unit" type="xs:string" fixed="cm3"/>
+								</xs:extension>
+							  </xs:simpleContent>
+							</xs:complexType>
+						  </xs:element>
+                          <xs:element name="power" minOccurs ="1" maxOccurs="1">
+							<xs:complexType>
+							  <xs:simpleContent>
+							    <xs:extension base="xs:short">
+								  <xs:attribute name="unit" type="xs:string" fixed="KM"/>
+								</xs:extension>
+							  </xs:simpleContent>
+							</xs:complexType>
+						  </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="fuel" type="fuelEnum" use="optional" default="Diesel"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="wheeldrive" minOccurs ="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute  name="automatic" type="xs:string" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="condition" minOccurs ="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="accidentfree" type="xs:string" use="required"/>
+                            <xs:attribute name="mileage" type="xs:string" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="lacquer" type="xs:string" minOccurs ="0" maxOccurs="1"/>
+                    <xs:element name="price" minOccurs ="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:int">
+                            <xs:attribute type="xs:string" name="currency" use="required"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="id" use="required"/>
+                  <xs:attribute type="xs:string" name="brandId" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="metadata">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="comment" type="xs:string"/>
+              <xs:element name="author" minOccurs="2" maxOccurs="2">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="index" type="xs:int" use="required"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:date" name="modificationDate" minOccurs="1" maxOccurs="1"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

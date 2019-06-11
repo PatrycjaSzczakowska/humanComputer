@@ -1,0 +1,47 @@
+﻿
+CAR SHOWROOM
+Data: 15.05.2019
+
+MODEL                    |   BRAND                    |   TYPE                     |   PRODUCTION               |   CONDITION                |   PRICE                    |   
+Range Rover              |   Land Rover               |   SUV                      |   2013                     |   used                     |   50000                    |   
+Range Rover              |   Land Rover               |   SUV                      |   2006                     |   used                     |   13000                    |   
+Impreza                  |   Subaru                   |   hatchback                |   2018                     |   new                      |   40000                    |   
+Defender                 |   Land Rover               |   SUV                      |   2011                     |   new                      |   38000                    |   
+F-Type                   |   Jaguar                   |   coupe                    |   2017                     |   used                     |   180000                   |   
+Outback                  |   Subaru                   |   combi                    |   2007                     |   used                     |   4000                     |   
+Golf                     |   Volkswagen               |   combi                    |   2019                     |   new                      |   42000                    |   
+Wrangler                 |   Jeep                     |   SUV                      |   2015                     |   used                     |   37000                    |   
+Kadjar                   |   Renault                  |   SUV                      |   2018                     |   new                      |   20000                    |   
+Captur                   |   Renault                  |   combi                    |   2013                     |   used                     |   25900                    |   
+Captur                   |   Renault                  |   minivan                  |   2018                     |   new                      |   131700                   |   
+Renegade                 |   Jeep                     |   SUV                      |   2018                     |   new                      |   65798                    |   
+Cherokee                 |   Jeep                     |   SUV                      |   2015                     |   used                     |   18000                    |   
+Libero                   |   Subaru                   |   other                    |   1995                     |   used                     |   24000                    |   
+Range Rover Evoque       |   Land Rover               |   SUV                      |   2017                     |   used                     |   24000                    |   
+Land Rover               |   Land Rover               |   SUV                      |   2017                     |   new                      |   329000                   |   
+Forester                 |   Subaru                   |   SUV                      |   2018                     |   new                      |   133411                   |   
+Defender                 |   Land Rover               |   SUV                      |   1997                     |   used                     |   7000                     |   
+Defender                 |   Land Rover               |   SUV                      |   2016                     |   new                      |   70000                    |   
+Clio                     |   Renault                  |   combi                    |   2014                     |   used                     |   33999                    |   
+Megane                   |   Renault                  |   compact                  |   2016                     |   used                     |   27999                    |   
+
+MARKI ALFABETYCZNIE 
+Marka                                             |   Siedziba                                          |   
+Jaguar                                            |   Coventry, UK                                      |   
+Jeep                                              |   Toledo, Ohio, U.S.                                |   
+Land Rover                                        |   Coventry, UK                                      |   
+Renault                                           |   Boulogne-Billancourt, France                      |   
+Subaru                                            |    Shibuya, Tokio, Japan                            |   
+Volkswagen                                        |   Wolfsburg, Germany                                |   
+
+
+ PODSUMOWANIE 
+Data podsumowania: 09.05.2019
+Łączna liczba autorów: 2
+Łączna liczba aut: 21
+Łączna liczba marek: 6
+Najwyższa cena: 329000.00
+Najniższa cena: 4000.00
+Suma cen: 1314807
+Ilość używanych aut: 12
+Ilość nowych aut: 9

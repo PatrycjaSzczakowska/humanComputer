@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="2300" height="800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="600" y="1050" height="100" width="100" onclick="alert('WELCOME')" />
+  <text onclick="alert('WELCOME')" x="0" y="0" font-family="Verdana" font-size="45">
+            Car ShowRoom
+            <animateMotion path="M 0 800 L 700 800 L 0 800" dur="20s" repeatCount="indefinite" /></text>
+  <g font-size="11">
+    <rect x="15" y="3" width="1100" height="20" fill="#f1f8e9" />
+    <text y="15" x="0" text-align="center">
+      <tspan x="30">
+                        Brand
+                    </tspan>
+      <tspan x="200">Model</tspan>
+      <tspan x="430">Type</tspan>
+      <tspan x="690">Production</tspan>
+      <tspan x="890">Condition</tspan>
+      <tspan x="1010">Price</tspan>
+    </text>
+    <rect x="15" y="21" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="33" x="0" width="200" text-align="center">
+      <tspan x="30">Land Rover</tspan>
+      <tspan x="200">Range Rover</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2013</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">50000$</tspan>
+    </text>
+    <rect x="15" y="39" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="51" x="0" width="200" text-align="center">
+      <tspan x="30">Land Rover</tspan>
+      <tspan x="200">Range Rover</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2006</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">13000$</tspan>
+    </text>
+    <rect x="15" y="57" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="69" x="0" width="200" text-align="center">
+      <tspan x="30">Subaru</tspan>
+      <tspan x="200">Impreza</tspan>
+      <tspan x="430">hatchback</tspan>
+      <tspan x="690">2018</tspan>
+      <tspan x="890">new</tspan>
+      <tspan x="1010">40000$</tspan>
+    </text>
+    <rect x="15" y="75" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="87" x="0" width="200" text-align="center">
+      <tspan x="30">Land Rover</tspan>
+      <tspan x="200">Defender</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2011</tspan>
+      <tspan x="890">new</tspan>
+      <tspan x="1010">38000$</tspan>
+    </text>
+    <rect x="15" y="93" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="105" x="0" width="200" text-align="center">
+      <tspan x="30">Jaguar</tspan>
+      <tspan x="200">F-Type</tspan>
+      <tspan x="430">coupe</tspan>
+      <tspan x="690">2017</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">180000$</tspan>
+    </text>
+    <rect x="15" y="111" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="123" x="0" width="200" text-align="center">
+      <tspan x="30">Subaru</tspan>
+      <tspan x="200">Outback</tspan>
+      <tspan x="430">combi</tspan>
+      <tspan x="690">2007</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">4000$</tspan>
+    </text>
+    <rect x="15" y="129" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="141" x="0" width="200" text-align="center">
+      <tspan x="30">Volkswagen</tspan>
+      <tspan x="200">Golf</tspan>
+      <tspan x="430">combi</tspan>
+      <tspan x="690">2019</tspan>
+      <tspan x="890">new</tspan>
+      <tspan x="1010">42000$</tspan>
+    </text>
+    <rect x="15" y="147" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="159" x="0" width="200" text-align="center">
+      <tspan x="30">Jeep</tspan>
+      <tspan x="200">Wrangler</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2015</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">37000$</tspan>
+    </text>
+    <rect x="15" y="165" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="177" x="0" width="200" text-align="center">
+      <tspan x="30">Renault</tspan>
+      <tspan x="200">Kadjar</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2018</tspan>
+      <tspan x="890">new</tspan>
+      <tspan x="1010">20000$</tspan>
+    </text>
+    <rect x="15" y="183" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="195" x="0" width="200" text-align="center">
+      <tspan x="30">Renault</tspan>
+      <tspan x="200">Captur</tspan>
+      <tspan x="430">combi</tspan>
+      <tspan x="690">2013</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">25900$</tspan>
+    </text>
+    <rect x="15" y="201" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="213" x="0" width="200" text-align="center">
+      <tspan x="30">Renault</tspan>
+      <tspan x="200">Captur</tspan>
+      <tspan x="430">minivan</tspan>
+      <tspan x="690">2018</tspan>
+      <tspan x="890">new</tspan>
+      <tspan x="1010">131700$</tspan>
+    </text>
+    <rect x="15" y="219" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="231" x="0" width="200" text-align="center">
+      <tspan x="30">Jeep</tspan>
+      <tspan x="200">Renegade</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2018</tspan>
+      <tspan x="890">new</tspan>
+      <tspan x="1010">65798$</tspan>
+    </text>
+    <rect x="15" y="237" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="249" x="0" width="200" text-align="center">
+      <tspan x="30">Jeep</tspan>
+      <tspan x="200">Cherokee</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2015</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">18000$</tspan>
+    </text>
+    <rect x="15" y="255" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="267" x="0" width="200" text-align="center">
+      <tspan x="30">Subaru</tspan>
+      <tspan x="200">Libero</tspan>
+      <tspan x="430">other</tspan>
+      <tspan x="690">1995</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">24000$</tspan>
+    </text>
+    <rect x="15" y="273" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="285" x="0" width="200" text-align="center">
+      <tspan x="30">Land Rover</tspan>
+      <tspan x="200">Range Rover Evoque</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2017</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">24000$</tspan>
+    </text>
+    <rect x="15" y="291" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="303" x="0" width="200" text-align="center">
+      <tspan x="30">Land Rover</tspan>
+      <tspan x="200">Land Rover</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2017</tspan>
+      <tspan x="890">new</tspan>
+      <tspan x="1010">329000$</tspan>
+    </text>
+    <rect x="15" y="309" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="321" x="0" width="200" text-align="center">
+      <tspan x="30">Subaru</tspan>
+      <tspan x="200">Forester</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2018</tspan>
+      <tspan x="890">new</tspan>
+      <tspan x="1010">133411$</tspan>
+    </text>
+    <rect x="15" y="327" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="339" x="0" width="200" text-align="center">
+      <tspan x="30">Land Rover</tspan>
+      <tspan x="200">Defender</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">1997</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">7000$</tspan>
+    </text>
+    <rect x="15" y="345" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="357" x="0" width="200" text-align="center">
+      <tspan x="30">Land Rover</tspan>
+      <tspan x="200">Defender</tspan>
+      <tspan x="430">SUV</tspan>
+      <tspan x="690">2016</tspan>
+      <tspan x="890">new</tspan>
+      <tspan x="1010">70000$</tspan>
+    </text>
+    <rect x="15" y="363" width="1100" height="20" fill="#99ccff" />
+    <text id="" y="375" x="0" width="200" text-align="center">
+      <tspan x="30">Renault</tspan>
+      <tspan x="200">Clio</tspan>
+      <tspan x="430">combi</tspan>
+      <tspan x="690">2014</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">33999$</tspan>
+    </text>
+    <rect x="15" y="381" width="1100" height="20" fill="#ccffff" />
+    <text id="" y="393" x="0" width="200" text-align="center">
+      <tspan x="30">Renault</tspan>
+      <tspan x="200">Megane</tspan>
+      <tspan x="430">compact</tspan>
+      <tspan x="690">2016</tspan>
+      <tspan x="890">used</tspan>
+      <tspan x="1010">27999$</tspan>
+    </text>
+  </g>
+  <rect x="5" y="450" width="1100" height="160" fill="#f1f8e9" />
+  <text x="116" y="475">0</text>
+  <text x="156" y="475">1</text>
+  <text x="196" y="475">2</text>
+  <text x="236" y="475">3</text>
+  <text x="276" y="475">4</text>
+  <text x="316" y="475">5</text>
+  <text x="356" y="475">6</text>
+  <text x="396" y="475">7</text>
+  <text x="436" y="475">8</text>
+  <text x="476" y="475">9</text>
+  <text x="516" y="475">10</text>
+  <text x="556" y="475">11</text>
+  <text x="596" y="475">12</text>
+  <text x="636" y="475">13</text>
+  <text x="676" y="475">14</text>
+  <text x="716" y="475">15</text>
+  <text x="756" y="475">16</text>
+  <text x="796" y="475">17</text>
+  <text x="836" y="475">18</text>
+  <text x="876" y="475">19</text>
+  <text x="916" y="475">20</text>
+  <line x1="120" x2="120" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="160" x2="160" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="200" x2="200" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="240" x2="240" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="280" x2="280" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="320" x2="320" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="360" x2="360" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="400" x2="400" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="440" x2="440" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="480" x2="480" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="520" x2="520" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="560" x2="560" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="600" x2="600" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="640" x2="640" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="680" x2="680" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="720" x2="720" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="760" x2="760" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="800" x2="800" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="840" x2="840" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="880" x2="880" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <line x1="920" x2="920" y1="500" y2="580" stroke="black" stroke-dasharray="5" />
+  <text x="15" y="525">used</text>
+  <rect id="used" x="120" y="515" height="13" width="480" fill="&#xA;                            #647687&#xA;                        ">
+    <animate id="anim12" attributeName="width" from="0" to="480" dur="6" begin="click" />
+  </rect>
+  <text x="15" y="540">new</text>
+  <rect id="new" x="120" y="530" height="13" width="360" fill="&#xA;                            #AA00FF&#xA;                        ">
+    <animate id="anim9" attributeName="width" from="0" to="360" dur="4.5" begin="click" />
+  </rect>
+  <image id="carButton" x="500" y="630" xlink:href="car.png" height="100" width="100" />
+  <script type="text/javascript">
+            document.getElementById("carButton").onclick = function()
+            {
+                var anims = document.querySelectorAll('[id^="anim"]');
+                for (i = 0; i&lt;anims.length; i++)
+                {
+                    anims[i].beginElement();
+                }
+            }
+        </script>
+</svg>

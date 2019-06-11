@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.przyklad.pl/showroom" xmlns:showroom="http://www.przyklad.pl/showroom">
+  <element name="carShowroom">
+    <complexType>
+      <sequence>
+        <element name="brands" type="showroom:brands" minOccurs="1" maxOccurs="1" />
+        <element name="cars" type="showroom:cars" minOccurs="1" maxOccurs="1" />
+        <element name="metadata" type="showroom:metadata" />
+      </sequence>
+    </complexType>
+    <key name="brandId">
+      <selector xpath="./brands/brand" />
+      <field xpath="@id" />
+    </key>
+    <keyref name="brandIdref" refer="showroom:brandId">
+      <selector xpath="./cars/car" />
+      <field xpath="@brandId" />
+    </keyref>
+    <key name="carId">
+      <selector xpath="./cars/cars" />
+      <field xpath="@id" />
+    </key>
+  </element>
+
+    <simpleType name="boolean">
+    <restriction base="normalizedString">
+      <pattern value="[YyNn]" />
+    </restriction>
+  </simpleType>
+  <simpleType name="fuelEnum">
+    <restriction base="normalizedString">
+      <enumeration value="Diesel" />
+      <enumeration value="Petrol" />
+    </restriction>
+  </simpleType>
+  <simpleType name="doors">
+    <restriction base="integer">
+      <pattern value="[2-5]" />
+    </restriction>
+  </simpleType>
+  <simpleType name="seats">
+    <restriction base="integer">
+      <pattern value="[2-9]" />
+    </restriction>
+  </simpleType>
+  <complexType name="carModel">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="version" type="normalizedString" use="optional" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carType">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="doors" type="showroom:doors" use="required" />
+        <attribute name="seats" type="showroom:seats" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carProduction">
+    <simpleContent>
+      <extension base="short">
+        <attribute name="start" type="short" use="required" />
+        <attribute name="end" type="short" use="optional" />
+        <attribute name="country" type="normalizedString" use="optional" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carEngineCapacity">
+    <simpleContent>
+      <extension base="short">
+        <attribute name="unit" type="normalizedString" fixed="cm3" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carEnginePower">
+    <simpleContent>
+      <extension base="short">
+        <attribute name="unit" type="normalizedString" fixed="KM" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carEngine">
+    <sequence>
+      <element name="cylindersNumber" type="byte" minOccurs="1" maxOccurs="1" />
+      <element name="capacity" type="showroom:carEngineCapacity" minOccurs="1" maxOccurs="1" />
+      <element name="power" type="showroom:carEnginePower" minOccurs="1" maxOccurs="1" />
+    </sequence>
+    <attribute name="fuel" type="showroom:fuelEnum" use="optional" default="Diesel" />
+  </complexType>
+  <complexType name="carWheeldrive">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="automatic" type="showroom:boolean" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carCondition">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="accidentfree" type="showroom:boolean" use="required" />
+        <attribute name="mileage" type="normalizedString" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="carPrice">
+    <simpleContent>
+      <extension base="int">
+        <attribute type="normalizedString" name="currency" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="car">
+    <sequence>
+      <element name="model" type="showroom:carModel" minOccurs="1" maxOccurs="1" />
+      <element name="type" type="showroom:carType" minOccurs="1" maxOccurs="1" />
+      <element name="production" type="showroom:carProduction" minOccurs="1" maxOccurs="unbounded" />
+      <element name="engine" type="showroom:carEngine" minOccurs="1" maxOccurs="1" />
+      <element name="wheeldrive" type="showroom:carWheeldrive" minOccurs="1" maxOccurs="1" />
+      <element name="condition" type="showroom:carCondition" minOccurs="1" maxOccurs="1" />
+      <element name="lacquer" type="normalizedString" minOccurs="0" maxOccurs="1" />
+      <element name="price" type="showroom:carPrice" minOccurs="1" maxOccurs="1" />
+    </sequence>
+    <attribute type="normalizedString" name="id" use="required" />
+    <attribute type="normalizedString" name="brandId" use="required" />
+  </complexType>
+  <complexType name="cars">
+    <sequence>
+      <element name="car" type="showroom:car" minOccurs="1" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+
+  <simpleType name="type">
+    <restriction base="integer">
+      <pattern value="[2][0-9][0-9][0-9][0-9][0-9]" />
+    </restriction>
+  </simpleType>
+  <simpleType name="comment">
+    <restriction base="string">
+      <maxLength value="1000" />
+    </restriction>
+  </simpleType>
+  <complexType name="student">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="index" type="showroom:type" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="metadata">
+    <choice minOccurs="0" maxOccurs="unbounded">
+      <element name="comment" type="showroom:comment" />
+      <element name="author" type="showroom:student" minOccurs="2" maxOccurs="2" />
+      <element name="modificationDate" type="date" minOccurs="1" maxOccurs="1" />
+    </choice>
+  </complexType>
+
+
+   <simpleType name="continentEnum">
+    <restriction base="string">
+      <enumeration value="Europe" />
+      <enumeration value="Asia" />
+      <enumeration value="North_America" />
+      <enumeration value="South_America" />
+      <enumeration value="Africa" />
+      <enumeration value="Austalia_and_Oceania" />
+    </restriction>
+  </simpleType>
+  <complexType name="brandCountry">
+    <simpleContent>
+      <extension base="normalizedString">
+        <attribute name="continent" type="showroom:continentEnum" use="optional" default="Europe" />
+      </extension>
+    </simpleContent>
+  </complexType>
+  <complexType name="brand">
+    <sequence>
+      <element name="name" type="normalizedString" minOccurs="1" maxOccurs="1" />
+      <element name="country" type="showroom:brandCountry" minOccurs="1" maxOccurs="1" />
+      <element name="headquarters" type="normalizedString" minOccurs="0" maxOccurs="unbounded" />
+      <element name="chairman" type="normalizedString" minOccurs="0" maxOccurs="1" />
+    </sequence>
+    <attribute name="id" type="normalizedString" use="required" />
+  </complexType>
+  <complexType name="brands">
+    <sequence>
+      <element name="brand" type="showroom:brand" minOccurs="1" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+</schema>
