@@ -110,20 +110,3 @@ fabric.properties
 hs_err_pid*
 
 # End of https://www.gitignore.io/api/java,intellij
-.idea/compiler.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-Auta2.xml
-AutaPodsumowanie.xml
-AutaToHtml.xsl
-AutaToXml.xsl
-Nowy.xml
-Zadanie5.iml
-generated/
-src/main/
-target/classes/GUI.fxml
-target/classes/META-INF/
-target/generated-sources/
-target/maven-archiver/
-target/maven-status/
