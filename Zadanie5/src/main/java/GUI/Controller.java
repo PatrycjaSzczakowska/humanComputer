@@ -154,6 +154,15 @@ public class Controller implements Initializable {
         return true;
     }
 
+    private void transformToXHTML(String path)
+    {
+        try {
+            XMLOperations.transformXML(path);
+        } catch (Exception e) {
+            openWrongValueWindow(e.getMessage());
+        }
+    }
+
     private void openErrorWindow(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("ERROR");
@@ -168,11 +177,6 @@ public class Controller implements Initializable {
         alert.setHeaderText("Wrong value");
         alert.setContentText(message);
         alert.showAndWait();
-    }
-
-    private void transformToXHTML(String path)
-    {
-        XMLOperations.transformXML(path);
     }
 
     public void metadane() {

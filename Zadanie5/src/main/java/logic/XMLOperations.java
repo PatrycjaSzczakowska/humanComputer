@@ -63,17 +63,13 @@ public class XMLOperations {
         carShowroom = (CarShowroom) unmarshaller.unmarshal(new FileInputStream(new File(xmlFilePath)));
     }
 
-    public static void transformXML(String transformedName) {
-        try {
+    public static void transformXML(String transformedName) throws Exception{
             TransformerFactory factory = TransformerFactory.newInstance();
             Source xslt = new StreamSource(new File(htmlSchema));
             Transformer transformer = factory.newTransformer(xslt);
 
             Source text = new StreamSource(new File(summaryFilePath));
             transformer.transform(text, new StreamResult(new File(transformedName)));
-        } catch (TransformerException e) {
-            e.printStackTrace();
-        }
     }
 
     public static String getXmlFilePath() {
