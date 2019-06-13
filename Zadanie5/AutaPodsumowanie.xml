@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<carShowrom>
+    <name>CAR SHOWROOM</name>
+    <brandsPart>BRANDS</brandsPart>
+    <brands>
+        <brand id="landRover">
+            <name>Land Rover</name>
+            <chairman>Ralf Speth</chairman>
+            <country continent="Europe">UK</country>
+        </brand>
+        <brand id="jaguar">
+            <name>Jaguar</name>
+            <chairman>Ralf Speth</chairman>
+            <country continent="Europe">UK</country>
+        </brand>
+        <brand id="volkswagen">
+            <name>Volkswagen</name>
+            <chairman>Herbert Diess</chairman>
+            <country continent="Europe">Germany</country>
+        </brand>
+        <brand id="renault">
+            <name>Renault</name>
+            <chairman>Thierry Bolloré</chairman>
+            <country continent="Europe">France</country>
+        </brand>
+        <brand id="jeep">
+            <name>Jeep</name>
+            <chairman>Michael Manley</chairman>
+            <country continent="North_America">U.S.</country>
+        </brand>
+        <brand id="subaru">
+            <name>Subaru</name>
+            <chairman>Tomomi Nakamura</chairman>
+            <country continent="Asia">Japan</country>
+        </brand>
+    </brands>
+    <carsPart>CARS</carsPart>
+    <cars>
+        <car>
+            <brand>
+                <name>Land Rover</name>
+            </brand>
+            <model version="IV">Range Rover</model>
+            <type doors="5" seats="5">SUV</type>
+            <production start="2012">2013</production>
+            <condition accidentfree="y" mileage="137000 km">used</condition>
+            <price currency="$">50000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Land Rover</name>
+            </brand>
+            <model version="III">Range Rover</model>
+            <type doors="5" seats="5">SUV</type>
+            <production start="2001" end="2012">2006</production>
+            <condition accidentfree="n" mileage="130000 km">used</condition>
+            <price currency="$">13000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Subaru</name>
+            </brand>
+            <model version="GH">Impreza</model>
+            <type doors="5" seats="5">hatchback</type>
+            <production start="2007">2018</production>
+            <condition accidentfree="y" mileage="10 km">new</condition>
+            <price currency="$">40000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Land Rover</name>
+            </brand>
+            <model version="110">Defender</model>
+            <type doors="5" seats="7">SUV</type>
+            <production start="2007" end="2016">2011</production>
+            <condition accidentfree="y" mileage="45000 km">new</condition>
+            <price currency="$">38000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Jaguar</name>
+            </brand>
+            <model>F-Type</model>
+            <type doors="2" seats="2">coupe</type>
+            <production start="2007">2017</production>
+            <condition accidentfree="y" mileage="4511 km">used</condition>
+            <price currency="$">180000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Subaru</name>
+            </brand>
+            <model version="III">Outback</model>
+            <type doors="5" seats="5">combi</type>
+            <production start="2005" end="2009">2007</production>
+            <condition accidentfree="y" mileage="240000 km">used</condition>
+            <price currency="$">4000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Volkswagen</name>
+            </brand>
+            <model version="VII">Golf</model>
+            <type doors="5" seats="5">combi</type>
+            <production start="2012" country="Poland">2019</production>
+            <condition accidentfree="y" mileage="10 km">new</condition>
+            <price currency="$">42000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Jeep</name>
+            </brand>
+            <model version="III">Wrangler</model>
+            <type doors="4" seats="5">SUV</type>
+            <production start="2006">2015</production>
+            <condition accidentfree="y" mileage="26559 km">used</condition>
+            <price currency="$">37000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Renault</name>
+            </brand>
+            <model>Kadjar</model>
+            <type doors="5" seats="5">SUV</type>
+            <production start="2007">2018</production>
+            <condition accidentfree="y" mileage="10 km">new</condition>
+            <price currency="$">20000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Renault</name>
+            </brand>
+            <model>Captur</model>
+            <type doors="5" seats="5">combi</type>
+            <production start="2010">2013</production>
+            <condition accidentfree="n" mileage="54777 km">used</condition>
+            <price currency="$">25900</price>
+        </car>
+        <car>
+            <brand>
+                <name>Renault</name>
+            </brand>
+            <model>Captur</model>
+            <type doors="5" seats="5">minivan</type>
+            <production start="2015">2018</production>
+            <condition accidentfree="y" mileage="5 km">new</condition>
+            <price currency="$">131700</price>
+        </car>
+        <car>
+            <brand>
+                <name>Jeep</name>
+            </brand>
+            <model>Renegade</model>
+            <type doors="4" seats="5">SUV</type>
+            <production start="2018">2018</production>
+            <condition accidentfree="y" mileage="1 km">new</condition>
+            <price currency="$">65798</price>
+        </car>
+        <car>
+            <brand>
+                <name>Jeep</name>
+            </brand>
+            <model version="V">Cherokee</model>
+            <type doors="5" seats="5">SUV</type>
+            <production start="2014">2015</production>
+            <condition accidentfree="y" mileage="27500 km">used</condition>
+            <price currency="$">18000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Subaru</name>
+            </brand>
+            <model>Libero</model>
+            <type doors="5" seats="5">other</type>
+            <production start="1987">1995</production>
+            <condition accidentfree="y" mileage="150000 km">used</condition>
+            <price currency="$">24000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Land Rover</name>
+            </brand>
+            <model>Range Rover Evoque</model>
+            <type doors="5" seats="5">SUV</type>
+            <production start="2014">2017</production>
+            <condition accidentfree="y" mileage="24900 km">used</condition>
+            <price currency="$">24000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Land Rover</name>
+            </brand>
+            <model version="V">Land Rover</model>
+            <type doors="5" seats="5">SUV</type>
+            <production start="2017">2017</production>
+            <condition accidentfree="y" mileage="13 km">new</condition>
+            <price currency="$">329000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Subaru</name>
+            </brand>
+            <model version="IV">Forester</model>
+            <type doors="5" seats="5">SUV</type>
+            <production start="2013">2018</production>
+            <condition accidentfree="y" mileage="1 km">new</condition>
+            <price currency="$">133411</price>
+        </car>
+        <car>
+            <brand>
+                <name>Land Rover</name>
+            </brand>
+            <model>Defender</model>
+            <type doors="3" seats="4">SUV</type>
+            <production start="1996">1997</production>
+            <condition accidentfree="n" mileage="210000 km">used</condition>
+            <price currency="$">7000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Land Rover</name>
+            </brand>
+            <model>Defender</model>
+            <type doors="3" seats="4">SUV</type>
+            <production start="2012">2016</production>
+            <condition accidentfree="y" mileage="10 km">new</condition>
+            <price currency="$">70000</price>
+        </car>
+        <car>
+            <brand>
+                <name>Renault</name>
+            </brand>
+            <model version="IV">Clio</model>
+            <type doors="5" seats="5">combi</type>
+            <production start="2012">2014</production>
+            <condition accidentfree="n" mileage="138000 km">used</condition>
+            <price currency="$">33999</price>
+        </car>
+        <car>
+            <brand>
+                <name>Renault</name>
+            </brand>
+            <model version="IV">Megane</model>
+            <type doors="5" seats="5">compact</type>
+            <production start="2016">2016</production>
+            <condition accidentfree="y" mileage="346000 km">used</condition>
+            <price currency="$">27999</price>
+        </car>
+    </cars>
+    <metadata>
+        <authors>
+            <author index="210198" />
+            <author index="210332" />
+        </authors>
+        <modificationDate>2019-03-19</modificationDate>
+    </metadata>
+    <brands_alphabetically>
+        <brand>
+            <name>Jaguar</name>
+            <headquarters>Coventry, UK</headquarters>
+        </brand>
+        <brand>
+            <name>Jeep</name>
+            <headquarters>Toledo, Ohio, U.S.</headquarters>
+        </brand>
+        <brand>
+            <name>Land Rover</name>
+            <headquarters>Coventry, UK</headquarters>
+        </brand>
+        <brand>
+            <name>Renault</name>
+            <headquarters>Boulogne-Billancourt, France</headquarters>
+        </brand>
+        <brand>
+            <name>Subaru</name>
+            <headquarters> Shibuya, Tokio, Japan</headquarters>
+        </brand>
+        <brand>
+            <name>Volkswagen</name>
+            <headquarters>Wolfsburg, Germany</headquarters>
+        </brand>
+    </brands_alphabetically>
+    <summarize>
+        <currentDate>09.05.2019</currentDate>
+        <authorsNumber>2</authorsNumber>
+        <brandsNumber>6</brandsNumber>
+        <carsNumber>21</carsNumber>
+        <highestPrice>329000.00</highestPrice>
+        <lowestPrice>4000.00</lowestPrice>
+        <allCarsPrice currency="USD">1314807</allCarsPrice>
+        <conditionCarsAmount>
+            <used>12</used>
+            <new>9</new>
+        </conditionCarsAmount>
+    </summarize>
+</carShowrom>

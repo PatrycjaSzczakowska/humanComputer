@@ -26,6 +26,7 @@ public class XMLOperations {
     private static Unmarshaller unmarshaller;
     private static Marshaller marshaller;
     private static String xmlFilePath;
+    private static String xmlToSaveFilePath;
     private static String xsdFilePath;
     private static String summaryFilePath;
     private static Schema schema;
@@ -34,7 +35,8 @@ public class XMLOperations {
 
     static {
         xmlFilePath = "Auta.xml";
-        xsdFilePath="Showroom.xsd";
+        xmlToSaveFilePath = "Auta2.xml";
+        xsdFilePath = "Showroom.xsd";
         summaryFilePath = "AutaPodsumowanie.xml";
 
         try {
@@ -51,8 +53,8 @@ public class XMLOperations {
         }
     }
 
-    public static void saveToXML(String newFile) throws JAXBException {
-        marshaller.marshal(carShowroom, new File(newFile + ".xml"));
+    public static void saveToXML() throws Exception {
+        marshaller.marshal(carShowroom, new File(xmlToSaveFilePath));
     }
 
     public static void readFromXML() throws JAXBException, FileNotFoundException {
@@ -83,10 +85,14 @@ public class XMLOperations {
     }
 
     public static void setXmlFilePath(String xmlFilePath) {
-        XMLOperations.xmlFilePath = xmlFilePath + ".xml";
+        XMLOperations.xmlFilePath = xmlFilePath;
     }
 
-    public static void setXsdFilePath(String xsdFilePath) {
-        XMLOperations.xsdFilePath = xsdFilePath + ".xsd";
+    public static String getXmlToSaveFilePath() {
+        return xmlToSaveFilePath;
+    }
+
+    public static void setXmlToSaveFilePath(String xmlToSaveFilePath) {
+        XMLOperations.xmlToSaveFilePath = xmlToSaveFilePath;
     }
 }
