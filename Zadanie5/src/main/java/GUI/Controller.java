@@ -170,7 +170,8 @@ public class Controller implements Initializable {
         alert.showAndWait();
     }
 
-    private void transformToXHTML(String path) {
+    private void transformToXHTML(String path)
+    {
         XMLOperations.transformXML(path);
     }
 
@@ -353,7 +354,7 @@ public class Controller implements Initializable {
 
     public void createCar() {
         Car newCar = new Car();
-        newCar.setId("c"+(carList.getItems().size()+1));
+        newCar.setId("c" + (carList.getItems().size() + 1));
         newCar.setBrandId(carBrandId.getItems().get(0));
         newCar.setModel(new CarModel());
         newCar.getModel().setValue("setModel");

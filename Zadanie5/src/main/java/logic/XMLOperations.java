@@ -9,9 +9,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.*;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
@@ -25,11 +23,14 @@ public class XMLOperations {
     private static JAXBContext jaxbContext;
     private static Unmarshaller unmarshaller;
     private static Marshaller marshaller;
+    private static Schema schema;
+
     private static String xmlFilePath;
     private static String xmlToSaveFilePath;
     private static String xsdFilePath;
     private static String summaryFilePath;
-    private static Schema schema;
+    private static String htmlSchema;
+
 
     public static CarShowroom carShowroom;
 
@@ -38,6 +39,7 @@ public class XMLOperations {
         xmlToSaveFilePath = "Auta2.xml";
         xsdFilePath = "Showroom.xsd";
         summaryFilePath = "AutaPodsumowanie.xml";
+        htmlSchema = "AutaToHtml.xsl";
 
         try {
             jaxbContext = JAXBContext.newInstance(CarShowroom.class);
@@ -62,15 +64,13 @@ public class XMLOperations {
     }
 
     public static void transformXML(String transformedName) {
-        StreamSource source = new StreamSource(xmlFilePath);
-        StreamSource stylesource = new StreamSource("AutaToXml.xsl");
-
-        TransformerFactory factory = TransformerFactory.newInstance();
-
-        StreamResult result = new StreamResult(summaryFilePath);
         try {
-            Transformer transformer = factory.newTransformer(stylesource);
-            transformer.transform(source, result);
+            TransformerFactory factory = TransformerFactory.newInstance();
+            Source xslt = new StreamSource(new File(htmlSchema));
+            Transformer transformer = factory.newTransformer(xslt);
+
+            Source text = new StreamSource(new File(summaryFilePath));
+            transformer.transform(text, new StreamResult(new File(transformedName)));
         } catch (TransformerException e) {
             e.printStackTrace();
         }
